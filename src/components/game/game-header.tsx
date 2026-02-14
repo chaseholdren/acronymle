@@ -20,9 +20,6 @@ export function GameHeader({ onShowStats, onShowHelp }: GameHeaderProps) {
           <Button variant="ghost" size="icon" onClick={onShowStats}>
             <BarChart3 className="h-6 w-6" />
           </Button>
-          <Button variant="ghost" size="icon">
-            <Settings className="h-6 w-6" />
-          </Button>
         </div>
       </div>
       <div className="w-full h-32 bg-slate-900 flex items-center justify-center rounded-lg overflow-hidden relative shadow-inner">
