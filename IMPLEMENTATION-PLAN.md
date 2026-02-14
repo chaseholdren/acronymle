@@ -12,10 +12,10 @@
 - [x] Configure `bun` as the primary runtime in `package.json` and ensure compatibility with Vercel deployment.
 
 ## Phase 2: Data & Backend API Development
-- [ ] Create `src/data/acronyms.json` with a list of daily acronyms and phrases as defined in the Data Model.
-- [ ] Implement `src/lib/utils.ts` with a normalization engine to clean strings (lowercase, strip punctuation).
-- [ ] Implement `GET /api/daily-acronym`: Server-side logic to fetch the acronym based on UTC date without revealing the full phrase.
-- [ ] Implement `POST /api/validate`: Server-side validation logic for guesses, returning word-level color results (Green/Yellow/Gray).
+- [x] Create `src/data/acronyms.json` with a list of daily acronyms and phrases as defined in the Data Model.
+- [x] Implement `src/lib/utils.ts` with a normalization engine to clean strings (lowercase, strip punctuation).
+- [x] Implement `GET /api/daily-acronym`: Server-side logic to fetch the acronym based on UTC date without revealing the full phrase.
+- [x] Implement `POST /api/validate`: Server-side validation logic for guesses, returning word-level color results (Green/Yellow/Gray).
 
 ## Phase 3: Core Game Logic & State Management
 - [ ] Create a `useGame` custom hook to manage session state (guesses, current attempt, hint status) using `useState` and `useEffect`.

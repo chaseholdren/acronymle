@@ -1,0 +1,23 @@
+[
+  {
+    "id": "2026-02-14",
+    "date": "2026-02-14",
+    "acronym": "NASA",
+    "phrase": ["National", "Aeronautics", "and", "Space", "Administration"],
+    "category": "Science"
+  },
+  {
+    "id": "2026-02-15",
+    "date": "2026-02-15",
+    "acronym": "HTML",
+    "phrase": ["HyperText", "Markup", "Language"],
+    "category": "Technology"
+  },
+  {
+    "id": "2026-02-16",
+    "date": "2026-02-16",
+    "acronym": "UNESCO",
+    "phrase": ["United", "Nations", "Educational", "Scientific", "and", "Cultural", "Organization"],
+    "category": "Government"
+  }
+]
