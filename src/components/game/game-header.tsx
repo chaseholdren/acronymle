@@ -3,7 +3,11 @@
 import { Info, BarChart3, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export function GameHeader() {
+interface GameHeaderProps {
+  onShowStats?: () => void;
+}
+
+export function GameHeader({ onShowStats }: GameHeaderProps) {
   return (
     <header className="flex flex-col items-center w-full max-w-2xl mx-auto py-6 border-b">
       <div className="w-full flex justify-between items-center px-4 mb-4">
@@ -12,7 +16,7 @@ export function GameHeader() {
         </Button>
         <h1 className="text-4xl font-bold tracking-tighter">ACRONYMLE</h1>
         <div className="flex gap-2">
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" onClick={onShowStats}>
             <BarChart3 className="h-6 w-6" />
           </Button>
           <Button variant="ghost" size="icon">

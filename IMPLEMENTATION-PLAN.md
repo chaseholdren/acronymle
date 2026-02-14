@@ -32,10 +32,10 @@
 - [x] Implement the "Get Hint" button and logic to reveal the category.
 
 ## Phase 5: Polish, Sharing & Stats
-- [ ] Implement the `ResultsModal`: Displays performance summary, distribution chart, and sharing options.
-- [ ] Implement the `SharingEngine`: Generates the emoji grid and copies it to the clipboard, including the hint marker (💡) if applicable.
-- [ ] Add toast notifications for "Copy to Clipboard" and "Invalid Guess" scenarios.
-- [ ] Ensure mobile responsiveness and accessibility (Aria labels, keyboard navigation).
+- [x] Implement the `ResultsModal`: Displays performance summary, distribution chart, and sharing options.
+- [x] Implement the `SharingEngine`: Generates the emoji grid and copies it to the clipboard, including the hint marker (💡) if applicable.
+- [x] Add toast notifications for "Copy to Clipboard" and "Invalid Guess" scenarios.
+- [x] Ensure mobile responsiveness and accessibility (Aria labels, keyboard navigation).
 
 ## Phase N: Completion & Version Control
 - [ ] Verify application functionality against the Technical Specification.

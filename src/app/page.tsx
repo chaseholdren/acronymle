@@ -1,28 +1,39 @@
 "use client";
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useGame } from "@/hooks/use-game";
 import { useStats } from "@/hooks/use-stats";
 import { GameHeader } from "@/components/game/game-header";
 import { AcronymDisplay } from "@/components/game/acronym-display";
 import { GuessGrid } from "@/components/game/guess-grid";
 import { GuessInput } from "@/components/game/guess-input";
+import { ResultsModal } from "@/components/game/results-modal";
 import { toast } from "sonner";
+import { Button } from "@/components/ui/button";
+import { BarChart3 } from "lucide-react";
 
 export default function Home() {
   const game = useGame();
   const { stats, recordGame } = useStats();
+  const [showResults, setShowResults] = useState(false);
 
   // Record game stats when finished
   useEffect(() => {
     if (game.isComplete && game.id) {
       recordGame(game.id, game.isCorrect, game.guesses.length);
       
+      // Delay opening modal for dramatic effect
+      const timer = setTimeout(() => {
+        setShowResults(true);
+      }, 1500);
+
       if (game.isCorrect) {
         toast.success("Brilliant! You've decoded the acronym.");
       } else {
         toast.error("Out of attempts! Try again tomorrow.");
       }
+
+      return () => clearTimeout(timer);
     }
   }, [game.isComplete, game.id, game.isCorrect, game.guesses.length, recordGame]);
 
@@ -39,7 +50,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center bg-background">
-      <GameHeader />
+      <GameHeader onShowStats={() => setShowResults(true)} />
       
       <div className="flex-1 w-full max-w-2xl mx-auto flex flex-col py-4">
         <AcronymDisplay 
@@ -69,9 +80,24 @@ export default function Home() {
             <p className="text-muted-foreground font-medium mb-4">
               Come back tomorrow for a new challenge!
             </p>
+            <Button onClick={() => setShowResults(true)} size="lg" className="gap-2">
+              <BarChart3 className="h-4 w-4" />
+              View Results
+            </Button>
           </div>
         )}
       </div>
+
+      <ResultsModal 
+        isOpen={showResults}
+        onClose={() => setShowResults(false)}
+        stats={stats}
+        guesses={game.guesses}
+        results={game.results}
+        isCorrect={game.isCorrect}
+        hintUsed={game.hintUsed}
+        acronym={game.acronym}
+      />
     </main>
   );
 }
