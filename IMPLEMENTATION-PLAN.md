@@ -24,12 +24,12 @@
 - [x] Create the validation feedback logic to map server response to visual states.
 
 ## Phase 4: Frontend UI Development
-- [ ] Create the `Layout` component with a responsive container.
-- [ ] Generate the Hero Image placeholder/asset and implement the header section.
-- [ ] Develop the `AcronymDisplay` component to show the target acronym and placeholders for the phrase.
-- [ ] Develop the `GuessInput` component: A dynamic set of text boxes based on the word count of the phrase.
-- [ ] Build the `GuessGrid`: Displays previous attempts with color-coded feedback.
-- [ ] Implement the "Get Hint" button and logic to reveal the category.
+- [x] Create the `Layout` component with a responsive container.
+- [x] Generate the Hero Image placeholder/asset and implement the header section.
+- [x] Develop the `AcronymDisplay` component to show the target acronym and placeholders for the phrase.
+- [x] Develop the `GuessInput` component: A dynamic set of text boxes based on the word count of the phrase.
+- [x] Build the `GuessGrid`: Displays previous attempts with color-coded feedback.
+- [x] Implement the "Get Hint" button and logic to reveal the category.
 
 ## Phase 5: Polish, Sharing & Stats
 - [ ] Implement the `ResultsModal`: Displays performance summary, distribution chart, and sharing options.
