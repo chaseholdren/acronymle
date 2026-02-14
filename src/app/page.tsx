@@ -8,6 +8,7 @@ import { AcronymDisplay } from "@/components/game/acronym-display";
 import { GuessGrid } from "@/components/game/guess-grid";
 import { GuessInput } from "@/components/game/guess-input";
 import { ResultsModal } from "@/components/game/results-modal";
+import { HelpModal } from "@/components/game/help-modal";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { BarChart3 } from "lucide-react";
@@ -16,6 +17,7 @@ export default function Home() {
   const game = useGame();
   const { stats, recordGame } = useStats();
   const [showResults, setShowResults] = useState(false);
+  const [showHelp, setShowHelp] = useState(false);
 
   // Record game stats when finished
   useEffect(() => {
@@ -50,7 +52,10 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center bg-background">
-      <GameHeader onShowStats={() => setShowResults(true)} />
+      <GameHeader 
+        onShowStats={() => setShowResults(true)} 
+        onShowHelp={() => setShowHelp(true)}
+      />
       
       <div className="flex-1 w-full max-w-2xl mx-auto flex flex-col py-4">
         <AcronymDisplay 
@@ -97,6 +102,11 @@ export default function Home() {
         isCorrect={game.isCorrect}
         hintUsed={game.hintUsed}
         acronym={game.acronym}
+      />
+
+      <HelpModal 
+        isOpen={showHelp}
+        onClose={() => setShowHelp(false)}
       />
     </main>
   );
