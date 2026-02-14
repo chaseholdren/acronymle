@@ -18,10 +18,10 @@
 - [x] Implement `POST /api/validate`: Server-side validation logic for guesses, returning word-level color results (Green/Yellow/Gray).
 
 ## Phase 3: Core Game Logic & State Management
-- [ ] Create a `useGame` custom hook to manage session state (guesses, current attempt, hint status) using `useState` and `useEffect`.
-- [ ] Implement persistence to `sessionStorage` within the hook to prevent "refresh-cheating".
-- [ ] Implement `useStats` custom hook to manage long-term user statistics (wins, streaks) in `localStorage`.
-- [ ] Create the validation feedback logic to map server response to visual states.
+- [x] Create a `useGame` custom hook to manage session state (guesses, current attempt, hint status) using `useState` and `useEffect`.
+- [x] Implement persistence to `sessionStorage` within the hook to prevent "refresh-cheating".
+- [x] Implement `useStats` custom hook to manage long-term user statistics (wins, streaks) in `localStorage`.
+- [x] Create the validation feedback logic to map server response to visual states.
 
 ## Phase 4: Frontend UI Development
 - [ ] Create the `Layout` component with a responsive container.
