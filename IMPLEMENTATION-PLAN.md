@@ -38,9 +38,9 @@
 - [x] Ensure mobile responsiveness and accessibility (Aria labels, keyboard navigation).
 
 ## Phase N: Completion & Version Control
-- [ ] Verify application functionality against the Technical Specification.
-- [ ] Create a `README.md` file explaining the application functions, how to interact with them, the architecture, file breakdown and how to run and test it locally.
-- [ ] Add all changes to the repository (`git add .`).
-- [ ] Commit the changes (`git commit -m "Complete implementation of Acronymle"`).
-- [ ] Push the feature branch to the remote repository.
+- [x] Verify application functionality against the Technical Specification.
+- [x] Create a `README.md` file explaining the application functions, how to interact with them, the architecture, file breakdown and how to run and test it locally.
+- [x] Add all changes to the repository (`git add .`).
+- [x] Commit the changes (`git commit -m "Complete implementation of Acronymle"`).
+- [x] Push the feature branch to the remote repository.
 - [ ] Open a pull request for the `acronymle` branch using the Gemini CLI github MCP server.

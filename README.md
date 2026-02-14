@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Acronymle
+
+Acronymle is a daily word puzzle application where users decode a daily acronym into its full-text phrase. Inspired by the "Wordle" mechanic, it focuses on word-level matching rather than letter-level matching.
+
+## Features
+
+- **Daily Challenge**: A new acronym to decode every 24 hours.
+- **Word-Level Feedback**:
+  - 🟩 **Green**: Correct word in the correct position.
+  - 🟨 **Yellow**: Word exists in the phrase but in a different position.
+  - ⬛ **Gray**: Word does not exist in the phrase.
+- **Hint System**: Reveals the category of the acronym (e.g., "Science", "Technology").
+- **Statistics**: Track your total games, win percentage, and current/max streaks.
+- **Sharing**: Copy your results to the clipboard with a spoiler-free emoji grid.
+
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Runtime**: Bun
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Icons**: Lucide React
+- **Hosting**: Vercel
+
+## Architecture
+
+The application follows a modern web architecture:
+- **Frontend**: React Client Components using custom hooks (`useGame`, `useStats`) for state management.
+- **API**: Next.js API Routes handle acronym metadata retrieval and guess validation.
+- **Storage**: 
+  - `sessionStorage`: Prevents refresh-cheating during an active session.
+  - `localStorage`: Persists user statistics across days.
+
+## File Structure
+
+- `src/app/`: Next.js pages and API routes.
+- `src/components/game/`: Specialized game UI components (Header, Grid, Input, Modal).
+- `src/hooks/`: Custom React hooks for game logic and statistics.
+- `src/data/`: Static acronym registry (`acronyms.json`).
+- `src/lib/`: Utility functions (Normalization, Tailwind merging).
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- [Bun](https://bun.sh/) installed on your machine.
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
+```
+
+### Running Locally
+
+```bash
 bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+bun run build
+```
 
-## Learn More
+## How to Play
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Look at the daily acronym (e.g., **NASA**).
+2. Type in your guess for the full phrase (e.g., "National Aeronautics and Space Administration").
+3. You have **5 attempts**.
+4. Use the **Hint** button if you're stuck (it will mark your score with a 💡).
+5. Share your results with friends!

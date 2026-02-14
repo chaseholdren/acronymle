@@ -38,8 +38,7 @@ export function ResultsModal({
           .map((res) => (res === "green" ? "🟩" : res === "yellow" ? "🟨" : "⬛"))
           .join("")
       )
-      .join("
-");
+      .join("\n");
 
     const score = isCorrect ? results.length : "X";
     const hintMarker = hintUsed ? " 💡" : "";
