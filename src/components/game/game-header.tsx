@@ -1,6 +1,6 @@
 "use client";
 
-import { Info, BarChart3, Settings } from "lucide-react";
+import { Info, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 interface GameHeaderProps {

@@ -1,7 +1,5 @@
 "use client";
 
-import { Card } from "@/components/ui/card";
-
 import { WordInfo } from "@/hooks/use-game";
 
 interface AcronymDisplayProps {

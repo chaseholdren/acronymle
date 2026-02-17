@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import acronyms from "@/data/acronyms.json";
 import { normalizeWord } from "@/lib/utils";
+import levenshtein from "js-levenshtein";
+
+type Result = "green" | "bright-yellow" | "faded-yellow" | "gray";
 
 export async function POST(request: Request) {
   try {
@@ -26,9 +29,8 @@ export async function POST(request: Request) {
     const normalizedTarget = targetPhrase.map(normalizeWord);
     const normalizedGuess = guess.map(normalizeWord);
 
-    const results: ("green" | "yellow" | "gray")[] = new Array(normalizedTarget.length).fill("gray");
+    const results: Result[] = new Array(normalizedTarget.length).fill("gray");
     
-    // To handle Yellow logic correctly, we need to track which words from target are already "used"
     const targetUsed = new Array(normalizedTarget.length).fill(false);
     const guessUsed = new Array(normalizedTarget.length).fill(false);
 
@@ -41,16 +43,40 @@ export async function POST(request: Request) {
       }
     }
 
-    // Second pass: Yellow (Present but wrong position)
+    // Second pass: Yellow (handle exact-but-wrong-position, and fuzzy typos)
     for (let i = 0; i < normalizedTarget.length; i++) {
       if (guessUsed[i]) continue;
 
+      let bestMatch: { result: Result; distance: number; index: number } = {
+        result: "gray",
+        distance: Infinity,
+        index: -1,
+      };
+
       for (let j = 0; j < normalizedTarget.length; j++) {
-        if (!targetUsed[j] && normalizedGuess[i] === normalizedTarget[j]) {
-          results[i] = "yellow";
-          targetUsed[j] = true;
-          break;
+        if (targetUsed[j]) continue;
+
+        // Case 1: Exact match, wrong position
+        if (normalizedGuess[i] === normalizedTarget[j]) {
+          if (bestMatch.distance > 0) { // Prioritize this over fuzzy matches
+            bestMatch = { result: "bright-yellow", distance: 0, index: j };
+          }
         }
+        
+        // Case 2: Fuzzy match
+        const distance = levenshtein(normalizedGuess[i], normalizedTarget[j]);
+        if (distance < bestMatch.distance) {
+          if (distance === 1) {
+            bestMatch = { result: "bright-yellow", distance: 1, index: j };
+          } else if (distance === 2) {
+            bestMatch = { result: "faded-yellow", distance: 2, index: j };
+          }
+        }
+      }
+
+      if (bestMatch.index !== -1) {
+        results[i] = bestMatch.result;
+        targetUsed[bestMatch.index] = true;
       }
     }
 
@@ -60,7 +86,7 @@ export async function POST(request: Request) {
       results,
       isCorrect,
     });
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

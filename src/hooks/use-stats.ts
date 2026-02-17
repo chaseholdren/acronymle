@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export interface UserStats {
   totalGames: number;
@@ -20,14 +20,18 @@ const DEFAULT_STATS: UserStats = {
 };
 
 export function useStats() {
-  const [stats, setStats] = useState<UserStats>(DEFAULT_STATS);
-
-  useEffect(() => {
-    const savedStats = localStorage.getItem("acronymle-stats");
-    if (savedStats) {
-      setStats(JSON.parse(savedStats));
+  const [stats, setStats] = useState<UserStats>(() => {
+    if (typeof window === "undefined") {
+      return DEFAULT_STATS;
     }
-  }, []);
+    try {
+      const savedStats = localStorage.getItem("acronymle-stats");
+      return savedStats ? JSON.parse(savedStats) : DEFAULT_STATS;
+    } catch (error) {
+      console.error("Failed to parse stats from localStorage", error);
+      return DEFAULT_STATS;
+    }
+  });
 
   const saveStats = (newStats: UserStats) => {
     setStats(newStats);

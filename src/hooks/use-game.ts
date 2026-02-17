@@ -14,7 +14,7 @@ export interface GameState {
   words: WordInfo[];
   hint: string | null;
   guesses: string[][];
-  results: ("green" | "yellow" | "gray")[][];
+  results: ("green" | "bright-yellow" | "faded-yellow" | "gray")[][];
   hintUsed: boolean;
   isComplete: boolean;
   isCorrect: boolean;
@@ -56,7 +56,7 @@ export function useGame() {
             isLoading: false,
           }));
         }
-      } catch (error) {
+      } catch {
         toast.error("Error loading game. Please try again later.");
         setState((prev) => ({ ...prev, isLoading: false }));
       }
@@ -103,7 +103,7 @@ export function useGame() {
       }));
 
       return { isCorrect, results: data.results };
-    } catch (error) {
+    } catch {
       toast.error("Error validating guess. Please try again.");
     }
   };

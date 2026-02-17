@@ -4,11 +4,13 @@ import { useState, useRef } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Lightbulb, Send } from "lucide-react";
-
+import { cn } from "@/lib/utils";
 import { WordInfo } from "@/hooks/use-game";
 
 interface GuessInputProps {
   words: WordInfo[];
+  guesses: string[][];
+  results: ("green" | "bright-yellow" | "faded-yellow" | "gray")[][];
   onSubmit: (guess: string[]) => void;
   onHint: () => void;
   hintUsed: boolean;
@@ -18,19 +20,38 @@ interface GuessInputProps {
 
 export function GuessInput({ 
   words, 
+  guesses,
+  results,
   onSubmit, 
   onHint, 
   hintUsed, 
   hint,
   disabled 
 }: GuessInputProps) {
+  // Helper to get pre-filled value for an index
+  const getPrefilledValue = (index: number) => {
+    if (words[index].isFiller) return words[index].word || "";
+    
+    // Check if this word was correctly guessed in any previous attempt
+    for (let i = 0; i < results.length; i++) {
+      if (results[i][index] === "green") {
+        return guesses[i][index];
+      }
+    }
+    return "";
+  };
+
+  const isAlreadyCorrect = (index: number) => {
+    return results.some(row => row[index] === "green");
+  };
+
   const [values, setValues] = useState<string[]>(
-    words.map(w => w.isFiller ? (w.word || "") : "")
+    words.map((_, i) => getPrefilledValue(i))
   );
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   const handleChange = (index: number, value: string) => {
-    if (words[index].isFiller) return;
+    if (words[index].isFiller || isAlreadyCorrect(index)) return;
     const newValues = [...values];
     newValues[index] = value;
     setValues(newValues);
@@ -39,7 +60,7 @@ export function GuessInput({
   const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
       let nextIndex = index + 1;
-      while (nextIndex < words.length && words[nextIndex].isFiller) {
+      while (nextIndex < words.length && (words[nextIndex].isFiller || isAlreadyCorrect(nextIndex))) {
         nextIndex++;
       }
       
@@ -50,7 +71,7 @@ export function GuessInput({
       }
     } else if (e.key === "Backspace" && !values[index] && index > 0) {
       let prevIndex = index - 1;
-      while (prevIndex >= 0 && words[prevIndex].isFiller) {
+      while (prevIndex >= 0 && (words[prevIndex].isFiller || isAlreadyCorrect(prevIndex))) {
         prevIndex--;
       }
       
@@ -63,13 +84,6 @@ export function GuessInput({
   const handleSubmit = () => {
     if (disabled || values.some(v => !v.trim())) return;
     onSubmit(values);
-    setValues(words.map(w => w.isFiller ? (w.word || "") : ""));
-    
-    // Find first non-filler index to focus
-    const firstInputIdx = words.findIndex(w => !w.isFiller);
-    if (firstInputIdx !== -1) {
-      inputRefs.current[firstInputIdx]?.focus();
-    }
   };
 
   if (words.length === 0) return null;
@@ -77,21 +91,27 @@ export function GuessInput({
   return (
     <div className="flex flex-col gap-4 w-full max-w-2xl mx-auto px-4 mt-8 pb-12">
       <div className="flex flex-wrap gap-2 justify-center">
-        {values.map((val, i) => (
-          <Input
-            key={i}
-            ref={(el) => { inputRefs.current[i] = el; }}
-            value={val}
-            onChange={(e) => handleChange(i, e.target.value)}
-            onKeyDown={(e) => handleKeyDown(i, e)}
-            className={`w-32 h-12 text-center uppercase font-medium ${
-              words[i].isFiller ? "bg-muted text-muted-foreground opacity-50" : ""
-            }`}
-            placeholder={words[i].isFiller ? "" : `Word ${i + 1}`}
-            disabled={disabled || words[i].isFiller}
-            autoFocus={!words[i].isFiller && words.slice(0, i).every(w => w.isFiller)}
-          />
-        ))}
+        {values.map((val, i) => {
+          const filler = words[i].isFiller;
+          const correct = isAlreadyCorrect(i);
+          return (
+            <Input
+              key={i}
+              ref={(el) => { inputRefs.current[i] = el; }}
+              value={val}
+              onChange={(e) => handleChange(i, e.target.value)}
+              onKeyDown={(e) => handleKeyDown(i, e)}
+              className={cn(
+                "w-32 h-12 text-center uppercase font-medium",
+                filler && "bg-muted text-muted-foreground opacity-50",
+                correct && "bg-green-50/50 border-green-200 text-green-700"
+              )}
+              placeholder={filler ? "" : `Word ${i + 1}`}
+              disabled={disabled || filler || correct}
+              autoFocus={!filler && !correct && words.slice(0, i).every((_w, idx) => words[idx].isFiller || isAlreadyCorrect(idx))}
+            />
+          );
+        })}
       </div>
       
       <div className="flex justify-center gap-4 items-center mt-2">

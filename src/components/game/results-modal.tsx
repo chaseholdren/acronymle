@@ -16,10 +16,9 @@ interface ResultsModalProps {
   onClose: () => void;
   stats: UserStats;
   guesses: string[][];
-  results: ("green" | "yellow" | "gray")[][];
+  results: ("green" | "bright-yellow" | "faded-yellow" | "gray")[][];
   isCorrect: boolean;
   hintUsed: boolean;
-  acronym: string | null;
 }
 
 export function ResultsModal({
@@ -29,13 +28,16 @@ export function ResultsModal({
   results,
   isCorrect,
   hintUsed,
-  acronym,
 }: ResultsModalProps) {
   const shareResults = () => {
     const emojiGrid = results
       .map((row) =>
         row
-          .map((res) => (res === "green" ? "🟩" : res === "yellow" ? "🟨" : "⬛"))
+          .map((res) => {
+            if (res === "green") return "🟩";
+            if (res === "bright-yellow" || res === "faded-yellow") return "🟨";
+            return "⬛";
+          })
           .join("")
       )
       .join("\n");

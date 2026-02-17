@@ -75,7 +75,10 @@ export default function Home() {
               {5 - game.guesses.length} {5 - game.guesses.length === 1 ? "attempt" : "attempts"} remaining
             </div>
             <GuessInput 
+              key={game.guesses.length}
               words={game.words}
+              guesses={game.guesses}
+              results={game.results}
               onSubmit={game.submitGuess}
               onHint={game.useHint}
               hintUsed={game.hintUsed}
@@ -106,7 +109,6 @@ export default function Home() {
         results={game.results}
         isCorrect={game.isCorrect}
         hintUsed={game.hintUsed}
-        acronym={game.acronym}
       />
 
       <HelpModal 
