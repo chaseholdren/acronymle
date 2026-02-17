@@ -35,8 +35,13 @@ export function HelpModal({ isOpen, onClose }: HelpModalProps) {
             </div>
             
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 bg-yellow-500 rounded flex items-center justify-center text-white font-bold text-xs">Y</div>
-              <p>The word is in the phrase but in the wrong position.</p>
+              <div className="w-8 h-8 bg-yellow-400 rounded flex items-center justify-center text-white font-bold text-xs">Y</div>
+              <p>Correct word in wrong spot, or only 1 letter off.</p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-yellow-400/50 rounded flex items-center justify-center text-white font-bold text-xs">Y</div>
+              <p>Close! This word is 2 letters away from a correct word.</p>
             </div>
             
             <div className="flex items-center gap-3">

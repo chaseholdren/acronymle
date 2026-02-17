@@ -7,7 +7,8 @@ Acronymle is a daily word puzzle application where users decode a daily acronym 
 - **Daily Challenge**: A new acronym to decode every 24 hours.
 - **Word-Level Feedback**:
   - 🟩 **Green**: Correct word in the correct position.
-  - 🟨 **Yellow**: Word exists in the phrase but in a different position.
+  - 🟨 **Bright Yellow**: Correct word in a different position OR only 1 letter off (typo).
+  - 🟡 **Faded Yellow**: Close! The word is 2 letters away from a correct word.
   - ⬛ **Gray**: Word does not exist in the phrase.
 - **Hint System**: Reveals the category of the acronym (e.g., "Science", "Technology").
 - **Statistics**: Track your total games, win percentage, and current/max streaks.
