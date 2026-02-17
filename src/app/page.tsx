@@ -70,14 +70,19 @@ export default function Home() {
         />
         
         {!game.isComplete && (
-          <GuessInput 
-            words={game.words}
-            onSubmit={game.submitGuess}
-            onHint={game.useHint}
-            hintUsed={game.hintUsed}
-            hint={game.hint}
-            disabled={game.isComplete}
-          />
+          <>
+            <div className="mt-8 text-center text-sm font-medium text-muted-foreground">
+              {5 - game.guesses.length} {5 - game.guesses.length === 1 ? "attempt" : "attempts"} remaining
+            </div>
+            <GuessInput 
+              words={game.words}
+              onSubmit={game.submitGuess}
+              onHint={game.useHint}
+              hintUsed={game.hintUsed}
+              hint={game.hint}
+              disabled={game.isComplete}
+            />
+          </>
         )}
 
         {game.isComplete && (
