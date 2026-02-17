@@ -5,8 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Lightbulb, Send } from "lucide-react";
 
+import { WordInfo } from "@/hooks/use-game";
+
 interface GuessInputProps {
-  wordCount: number;
+  words: WordInfo[];
   onSubmit: (guess: string[]) => void;
   onHint: () => void;
   hintUsed: boolean;
@@ -15,17 +17,20 @@ interface GuessInputProps {
 }
 
 export function GuessInput({ 
-  wordCount, 
+  words, 
   onSubmit, 
   onHint, 
   hintUsed, 
   hint,
   disabled 
 }: GuessInputProps) {
-  const [values, setValues] = useState<string[]>(Array(wordCount).fill(""));
+  const [values, setValues] = useState<string[]>(
+    words.map(w => w.isFiller ? (w.word || "") : "")
+  );
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   const handleChange = (index: number, value: string) => {
+    if (words[index].isFiller) return;
     const newValues = [...values];
     newValues[index] = value;
     setValues(newValues);
@@ -33,24 +38,41 @@ export function GuessInput({
 
   const handleKeyDown = (index: number, e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
-      if (index < wordCount - 1) {
-        inputRefs.current[index + 1]?.focus();
+      let nextIndex = index + 1;
+      while (nextIndex < words.length && words[nextIndex].isFiller) {
+        nextIndex++;
+      }
+      
+      if (nextIndex < words.length) {
+        inputRefs.current[nextIndex]?.focus();
       } else {
         handleSubmit();
       }
     } else if (e.key === "Backspace" && !values[index] && index > 0) {
-      inputRefs.current[index - 1]?.focus();
+      let prevIndex = index - 1;
+      while (prevIndex >= 0 && words[prevIndex].isFiller) {
+        prevIndex--;
+      }
+      
+      if (prevIndex >= 0) {
+        inputRefs.current[prevIndex]?.focus();
+      }
     }
   };
 
   const handleSubmit = () => {
-    if (disabled) return;
+    if (disabled || values.some(v => !v.trim())) return;
     onSubmit(values);
-    setValues(Array(wordCount).fill(""));
-    inputRefs.current[0]?.focus();
+    setValues(words.map(w => w.isFiller ? (w.word || "") : ""));
+    
+    // Find first non-filler index to focus
+    const firstInputIdx = words.findIndex(w => !w.isFiller);
+    if (firstInputIdx !== -1) {
+      inputRefs.current[firstInputIdx]?.focus();
+    }
   };
 
-  if (wordCount === 0) return null;
+  if (words.length === 0) return null;
 
   return (
     <div className="flex flex-col gap-4 w-full max-w-2xl mx-auto px-4 mt-8 pb-12">
@@ -62,10 +84,12 @@ export function GuessInput({
             value={val}
             onChange={(e) => handleChange(i, e.target.value)}
             onKeyDown={(e) => handleKeyDown(i, e)}
-            className="w-32 h-12 text-center uppercase font-medium"
-            placeholder={`Word ${i + 1}`}
-            disabled={disabled}
-            autoFocus={i === 0}
+            className={`w-32 h-12 text-center uppercase font-medium ${
+              words[i].isFiller ? "bg-muted text-muted-foreground opacity-50" : ""
+            }`}
+            placeholder={words[i].isFiller ? "" : `Word ${i + 1}`}
+            disabled={disabled || words[i].isFiller}
+            autoFocus={!words[i].isFiller && words.slice(0, i).every(w => w.isFiller)}
           />
         ))}
       </div>

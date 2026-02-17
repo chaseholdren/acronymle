@@ -60,18 +60,18 @@ export default function Home() {
       <div className="flex-1 w-full max-w-2xl mx-auto flex flex-col py-4">
         <AcronymDisplay 
           acronym={game.acronym} 
-          wordCount={game.wordCount} 
+          words={game.words} 
         />
         
         <GuessGrid 
           guesses={game.guesses} 
           results={game.results} 
-          wordCount={game.wordCount} 
+          words={game.words} 
         />
         
         {!game.isComplete && (
           <GuessInput 
-            wordCount={game.wordCount}
+            words={game.words}
             onSubmit={game.submitGuess}
             onHint={game.useHint}
             hintUsed={game.hintUsed}

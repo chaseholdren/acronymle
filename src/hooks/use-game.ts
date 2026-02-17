@@ -3,10 +3,15 @@
 import { useState, useEffect } from "react";
 import { toast } from "sonner";
 
+export interface WordInfo {
+  isFiller: boolean;
+  word?: string;
+}
+
 export interface GameState {
   id: string | null;
   acronym: string | null;
-  wordCount: number;
+  words: WordInfo[];
   hint: string | null;
   guesses: string[][];
   results: ("green" | "yellow" | "gray")[][];
@@ -20,7 +25,7 @@ export function useGame() {
   const [state, setState] = useState<GameState>({
     id: null,
     acronym: null,
-    wordCount: 0,
+    words: [],
     hint: null,
     guesses: [],
     results: [],
@@ -46,7 +51,7 @@ export function useGame() {
             ...prev,
             id: data.id,
             acronym: data.acronym,
-            wordCount: data.wordCount,
+            words: data.words,
             hint: data.hint,
             isLoading: false,
           }));

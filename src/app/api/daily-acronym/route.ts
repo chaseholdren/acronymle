@@ -13,10 +13,26 @@ export async function GET() {
     );
   }
 
+  // Determine which words are fillers
+  const acronym = acronymData.acronym;
+  const phrase = acronymData.phrase;
+  let acronymPtr = 0;
+  
+  const words = phrase.map((word) => {
+    const isMatch = acronymPtr < acronym.length && 
+                   word[0].toUpperCase() === acronym[acronymPtr].toUpperCase();
+    if (isMatch) {
+      acronymPtr++;
+      return { isFiller: false };
+    } else {
+      return { isFiller: true, word: word };
+    }
+  });
+
   return NextResponse.json({
     id: acronymData.id,
     acronym: acronymData.acronym,
-    wordCount: acronymData.phrase.length,
+    words: words,
     hint: acronymData.category,
   });
 }

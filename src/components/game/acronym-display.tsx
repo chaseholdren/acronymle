@@ -2,12 +2,14 @@
 
 import { Card } from "@/components/ui/card";
 
+import { WordInfo } from "@/hooks/use-game";
+
 interface AcronymDisplayProps {
   acronym: string | null;
-  wordCount: number;
+  words: WordInfo[];
 }
 
-export function AcronymDisplay({ acronym, wordCount }: AcronymDisplayProps) {
+export function AcronymDisplay({ acronym, words }: AcronymDisplayProps) {
   if (!acronym) return null;
 
   return (
@@ -23,7 +25,7 @@ export function AcronymDisplay({ acronym, wordCount }: AcronymDisplayProps) {
         ))}
       </div>
       <div className="flex gap-1">
-        {Array.from({ length: wordCount }).map((_, i) => (
+        {words.map((_, i) => (
           <div key={i} className="h-1 w-8 bg-muted rounded-full" />
         ))}
       </div>
