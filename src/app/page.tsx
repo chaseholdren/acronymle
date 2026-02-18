@@ -20,6 +20,17 @@ export default function Home() {
   const [showHelp, setShowHelp] = useState(false);
   const [hasShownAutoResults, setHasShownAutoResults] = useState(false);
 
+  // Show help on first visit
+  useEffect(() => {
+    const hasPlayed = localStorage.getItem("acronymle-has-played");
+    if (!hasPlayed) {
+      setTimeout(() => {
+        setShowHelp(true);
+      }, 0);
+      localStorage.setItem("acronymle-has-played", "true");
+    }
+  }, []);
+
   // Record game stats when finished
   useEffect(() => {
     if (game.isComplete && game.id && !hasShownAutoResults) {

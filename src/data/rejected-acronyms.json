@@ -75,5 +75,12 @@
     "acronym": "DOB",
     "phrase": ["Date", "Of", "Birth"],
     "category": "Common Phrase"
+  },
+  {
+    "id": "MODEM",
+    "date": "2026-02-18",
+    "acronym": "MODEM",
+    "phrase": ["Modulator", "Demodulator"],
+    "category": "Computing"
   }
 ]

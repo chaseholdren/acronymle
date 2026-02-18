@@ -29,528 +29,933 @@
   },
   {
     "id": "2026-02-18",
-    
     "date": "2026-02-18",
-    "acronym": "MODEM",
-    "phrase": ["Modulator", "Demodulator"],
-    "category": "Computing"
-  },
-  {
-    "id": "2026-02-19",
-    "date": "2026-02-19",
     "acronym": "INTERPOL",
     "phrase": ["International", "Criminal", "Police", "Organization"],
     "category": "Law Enforcement"
   },
   {
-    "id": "2026-02-20",
-    "date": "2026-02-20",
+    "id": "2026-02-19",
+    "date": "2026-02-19",
     "acronym": "DHS",
     "phrase": ["Department", "of", "Homeland", "Security"],
     "category": "Government"
   },
   {
-    "id": "2026-02-21",
-    "date": "2026-02-21",
+    "id": "2026-02-20",
+    "date": "2026-02-20",
     "acronym": "CTO",
     "phrase": ["Chief", "Technology", "Officer"],
     "category": "Business"
   },
   {
-    "id": "2026-02-22",
-    "date": "2026-02-22",
+    "id": "2026-02-21",
+    "date": "2026-02-21",
     "acronym": "GPS",
     "phrase": ["Global", "Positioning", "System"],
     "category": "Technology"
   },
   {
-    "id": "2026-02-23",
-    "date": "2026-02-23",
+    "id": "2026-02-22",
+    "date": "2026-02-22",
     "acronym": "B2C",
     "phrase": ["Business", "to", "Consumer"],
     "category": "Business"
   },
   {
-    "id": "2026-02-24",
-    "date": "2026-02-24",
+    "id": "2026-02-23",
+    "date": "2026-02-23",
     "acronym": "OSHA",
     "phrase": ["Occupational", "Safety", "and", "Health", "Administration"],
     "category": "Government"
   },
   {
-    "id": "2026-02-25",
-    "date": "2026-02-25",
+    "id": "2026-02-24",
+    "date": "2026-02-24",
     "acronym": "OPEC",
     "phrase": ["Organization", "of", "the", "Petroleum", "Exporting", "Countries"],
     "category": "International"
   },
   {
-    "id": "2026-02-26",
-    "date": "2026-02-26",
+    "id": "2026-02-25",
+    "date": "2026-02-25",
     "acronym": "CLI",
     "phrase": ["Command", "Line", "Interface"],
     "category": "Computing"
   },
   {
-    "id": "2026-02-27",
-    "date": "2026-02-27",
+    "id": "2026-02-26",
+    "date": "2026-02-26",
     "acronym": "AKA",
     "phrase": ["Also", "Known", "As"],
     "category": "Common Phrase"
   },
   {
-    "id": "2026-02-28",
-    "date": "2026-02-28",
+    "id": "2026-02-27",
+    "date": "2026-02-27",
     "acronym": "FBI",
     "phrase": ["Federal", "Bureau", "of", "Investigation"],
     "category": "Government"
   },
   {
-    "id": "2026-03-01",
-    "date": "2026-03-01",
+    "id": "2026-02-28",
+    "date": "2026-02-28",
     "acronym": "PNG",
     "phrase": ["Portable", "Network", "Graphics"],
     "category": "Computing"
   },
   {
-    "id": "2026-03-02",
-    "date": "2026-03-02",
+    "id": "2026-03-01",
+    "date": "2026-03-01",
     "acronym": "AIDS",
     "phrase": ["Acquired", "Immunodeficiency", "Syndrome"],
     "category": "Medicine"
   },
   {
-    "id": "2026-03-03",
-    "date": "2026-03-03",
+    "id": "2026-03-02",
+    "date": "2026-03-02",
     "acronym": "TMI",
     "phrase": ["Too", "Much", "Information"],
     "category": "Common Phrase"
   },
   {
-    "id": "2026-03-04",
-    "date": "2026-03-04",
+    "id": "2026-03-03",
+    "date": "2026-03-03",
     "acronym": "B2B",
     "phrase": ["Business", "to", "Business"],
     "category": "Business"
   },
   {
-    "id": "2026-03-05",
-    "date": "2026-03-05",
+    "id": "2026-03-04",
+    "date": "2026-03-04",
     "acronym": "FTC",
     "phrase": ["Federal", "Trade", "Commission"],
     "category": "Government"
   },
   {
-    "id": "2026-03-06",
-    "date": "2026-03-06",
+    "id": "2026-03-05",
+    "date": "2026-03-05",
     "acronym": "SEC",
     "phrase": ["Securities", "and", "Exchange", "Commission"],
     "category": "Government"
   },
   {
-    "id": "2026-03-07",
-    "date": "2026-03-07",
+    "id": "2026-03-06",
+    "date": "2026-03-06",
     "acronym": "FAQ",
     "phrase": ["Frequently", "Asked", "Questions"],
     "category": "Common Phrase"
   },
   {
-    "id": "2026-03-08",
-    "date": "2026-03-08",
+    "id": "2026-03-07",
+    "date": "2026-03-07",
     "acronym": "PaaS",
     "phrase": ["Platform", "as", "a", "Service"],
     "category": "Computing"
   },
   {
-    "id": "2026-03-09",
-    "date": "2026-03-09",
+    "id": "2026-03-08",
+    "date": "2026-03-08",
     "acronym": "ER",
     "phrase": ["Emergency", "Room"],
     "category": "Medicine"
   },
   {
-    "id": "2026-03-10",
-    "date": "2026-03-10",
+    "id": "2026-03-09",
+    "date": "2026-03-09",
     "acronym": "LOL",
     "phrase": ["Laughing", "Out", "Loud"],
     "category": "Common Phrase"
   },
   {
-    "id": "2026-03-11",
-    "date": "2026-03-11",
+    "id": "2026-03-10",
+    "date": "2026-03-10",
     "acronym": "IQ",
     "phrase": ["Intelligence", "Quotient"],
     "category": "Science"
   },
   {
-    "id": "2026-03-12",
-    "date": "2026-03-12",
+    "id": "2026-03-11",
+    "date": "2026-03-11",
     "acronym": "TSA",
     "phrase": ["Transportation", "Security", "Administration"],
     "category": "Government"
   },
   {
-    "id": "2026-03-13",
-    "date": "2026-03-13",
+    "id": "2026-03-12",
+    "date": "2026-03-12",
     "acronym": "SNAFU",
     "phrase": ["Situation", "Normal", "All", "Fouled", "Up"],
     "category": "Common Phrase"
   },
   {
-    "id": "2026-03-14",
-    "date": "2026-03-14",
+    "id": "2026-03-13",
+    "date": "2026-03-13",
     "acronym": "CT",
     "phrase": ["Computed", "Tomography"],
     "category": "Medicine"
   },
   {
-    "id": "2026-03-15",
-    "date": "2026-03-15",
+    "id": "2026-03-14",
+    "date": "2026-03-14",
     "acronym": "BRICS",
     "phrase": ["Brazil", "Russia", "India", "China", "South", "Africa"],
     "category": "International"
   },
   {
-    "id": "2026-03-16",
-    "date": "2026-03-16",
+    "id": "2026-03-15",
+    "date": "2026-03-15",
     "acronym": "IMHO",
     "phrase": ["In", "My", "Humble", "Opinion"],
     "category": "Common Phrase"
   },
   {
-    "id": "2026-03-17",
-    "date": "2026-03-17",
+    "id": "2026-03-16",
+    "date": "2026-03-16",
     "acronym": "MPEG",
     "phrase": ["Moving", "Picture", "Experts", "Group"],
     "category": "Computing"
   },
   {
-    "id": "2026-03-18",
-    "date": "2026-03-18",
+    "id": "2026-03-17",
+    "date": "2026-03-17",
     "acronym": "CARE",
     "phrase": ["Cooperative", "for", "Assistance", "and", "Relief", "Everywhere"],
     "category": "Humanitarian"
   },
   {
-    "id": "2026-03-19",
-    "date": "2026-03-19",
+    "id": "2026-03-18",
+    "date": "2026-03-18",
     "acronym": "DOD",
     "phrase": ["Department", "of", "Defense"],
     "category": "Government"
   },
   {
-    "id": "2026-03-20",
-    "date": "2026-03-20",
+    "id": "2026-03-19",
+    "date": "2026-03-19",
     "acronym": "ROI",
     "phrase": ["Return", "on", "Investment"],
     "category": "Finance"
   },
   {
-    "id": "2026-03-21",
-    "date": "2026-03-21",
+    "id": "2026-03-20",
+    "date": "2026-03-20",
     "acronym": "STFU",
     "phrase": ["Shut", "the", "Foul", "Up"],
     "category": "Common Phrase"
   },
   {
-    "id": "2026-03-22",
-    "date": "2026-03-22",
+    "id": "2026-03-21",
+    "date": "2026-03-21",
     "acronym": "SAT",
     "phrase": ["Scholastic", "Assessment", "Test"],
     "category": "Education"
   },
   {
-    "id": "2026-03-23",
-    "date": "2026-03-23",
+    "id": "2026-03-22",
+    "date": "2026-03-22",
     "acronym": "SIM",
     "phrase": ["Subscriber", "Identity", "Module"],
     "category": "Technology"
   },
   {
-    "id": "2026-03-24",
-    "date": "2026-03-24",
+    "id": "2026-03-23",
+    "date": "2026-03-23",
     "acronym": "WHO",
     "phrase": ["World", "Health", "Organization"],
     "category": "International"
   },
   {
-    "id": "2026-03-25",
-    "date": "2026-03-25",
+    "id": "2026-03-24",
+    "date": "2026-03-24",
     "acronym": "G20",
     "phrase": ["Group", "of", "Twenty"],
     "category": "International"
   },
   {
-    "id": "2026-03-26",
-    "date": "2026-03-26",
-    "acronym": "DOD",
-    "phrase": ["Department", "of", "Defense"],
-    "category": "Government"
-  },
-  {
-    "id": "2026-03-27",
-    "date": "2026-03-27",
+    "id": "2026-03-25",
+    "date": "2026-03-25",
     "acronym": "HTTP",
     "phrase": ["Hypertext", "Transfer", "Protocol"],
     "category": "Computing"
   },
   {
-    "id": "2026-03-28",
-    "date": "2026-03-28",
+    "id": "2026-03-26",
+    "date": "2026-03-26",
     "acronym": "WTO",
     "phrase": ["World", "Trade", "Organization"],
     "category": "International"
   },
   {
-    "id": "2026-03-29",
-    "date": "2026-03-29",
+    "id": "2026-03-27",
+    "date": "2026-03-27",
     "acronym": "TASER",
     "phrase": ["Thomas", "A.", "Swift's", "Electric", "Rifle"],
     "category": "Technology"
   },
   {
-    "id": "2026-03-30",
-    "date": "2026-03-30",
+    "id": "2026-03-28",
+    "date": "2026-03-28",
     "acronym": "ATM",
     "phrase": ["Automated", "Teller", "Machine"],
     "category": "Finance"
   },
   {
-    "id": "2026-03-31",
-    "date": "2026-03-31",
+    "id": "2026-03-29",
+    "date": "2026-03-29",
     "acronym": "RADAR",
     "phrase": ["Radio", "Detection", "and", "Ranging"],
     "category": "Science"
   },
   {
-    "id": "2026-04-01",
-    "date": "2026-04-01",
+    "id": "2026-03-30",
+    "date": "2026-03-30",
     "acronym": "DNA",
     "phrase": ["Deoxyribonucleic", "Acid"],
     "category": "Science"
   },
   {
-    "id": "2026-04-02",
-    "date": "2026-04-02",
+    "id": "2026-03-31",
+    "date": "2026-03-31",
     "acronym": "FCC",
     "phrase": ["Federal", "Communications", "Commission"],
     "category": "Government"
   },
   {
-    "id": "2026-04-03",
-    "date": "2026-04-03",
+    "id": "2026-04-01",
+    "date": "2026-04-01",
     "acronym": "SaaS",
     "phrase": ["Software", "as", "a", "Service"],
     "category": "Computing"
   },
   {
-    "id": "2026-04-04",
-    "date": "2026-04-04",
+    "id": "2026-04-02",
+    "date": "2026-04-02",
     "acronym": "OECD",
     "phrase": ["Organization", "for", "Economic", "Cooperation", "and", "Development"],
     "category": "International"
   },
   {
-    "id": "2026-04-05",
-    "date": "2026-04-05",
-    "acronym": "CTO",
-    "phrase": ["Chief", "Technology", "Officer"],
-    "category": "Business"
-  },
-  {
-    "id": "2026-04-06",
-    "date": "2026-04-06",
+    "id": "2026-04-03",
+    "date": "2026-04-03",
     "acronym": "CAPTCHA",
     "phrase": ["Completely", "Automated", "Public", "Turing", "test", "to", "tell", "Computers", "and", "Humans", "Apart"],
     "category": "Computing"
   },
   {
-    "id": "2026-04-07",
-    "date": "2026-04-07",
+    "id": "2026-04-04",
+    "date": "2026-04-04",
     "acronym": "G7",
     "phrase": ["Group", "of", "Seven"],
     "category": "International"
   },
   {
-    "id": "2026-04-08",
-    "date": "2026-04-08",
-    "acronym": "CT",
-    "phrase": ["Computed", "Tomography"],
-    "category": "Medicine"
-  },
-  {
-    "id": "2026-04-09",
-    "date": "2026-04-09",
-    "acronym": "FBI",
-    "phrase": ["Federal", "Bureau", "of", "Investigation"],
-    "category": "Government"
-  },
-  {
-    "id": "2026-04-10",
-    "date": "2026-04-10",
+    "id": "2026-04-05",
+    "date": "2026-04-05",
     "acronym": "SETI",
     "phrase": ["Search", "for", "Extraterrestrial", "Intelligence"],
     "category": "Science"
   },
   {
-    "id": "2026-04-11",
-    "date": "2026-04-11",
-    "acronym": "SNAFU",
-    "phrase": ["Situation", "Normal", "All", "Fouled", "Up"],
-    "category": "Common Phrase"
-  },
-  {
-    "id": "2026-04-12",
-    "date": "2026-04-12",
-    "acronym": "GPS",
-    "phrase": ["Global", "Positioning", "System"],
-    "category": "Technology"
-  },
-  {
-    "id": "2026-04-13",
-    "date": "2026-04-13",
-    "acronym": "AIDS",
-    "phrase": ["Acquired", "Immunodeficiency", "Syndrome"],
-    "category": "Medicine"
-  },
-  {
-    "id": "2026-04-14",
-    "date": "2026-04-14",
-    "acronym": "ROI",
-    "phrase": ["Return", "on", "Investment"],
-    "category": "Finance"
-  },
-  {
-    "id": "2026-04-15",
-    "date": "2026-04-15",
+    "id": "2026-04-06",
+    "date": "2026-04-06",
     "acronym": "BTW",
     "phrase": ["By", "the", "Way"],
     "category": "Common Phrase"
   },
   {
-    "id": "2026-04-16",
-    "date": "2026-04-16",
-    "acronym": "OPEC",
-    "phrase": ["Organization", "of", "the", "Petroleum", "Exporting", "Countries"],
-    "category": "International"
-  },
-  {
-    "id": "2026-04-17",
-    "date": "2026-04-17",
+    "id": "2026-04-07",
+    "date": "2026-04-07",
     "acronym": "LASER",
     "phrase": ["Light", "Amplification", "by", "Stimulated", "Emission", "of", "Radiation"],
     "category": "Science"
   },
   {
-    "id": "2026-04-18",
-    "date": "2026-04-18",
-    "acronym": "FBI",
-    "phrase": ["Federal", "Bureau", "of", "Investigation"],
-    "category": "Government"
-  },
-  {
-    "id": "2026-04-19",
-    "date": "2026-04-19",
-    "acronym": "ER",
-    "phrase": ["Emergency", "Room"],
-    "category": "Medicine"
-  },
-  {
-    "id": "2026-04-20",
-    "date": "2026-04-20",
-    "acronym": "FBI",
-    "phrase": ["Federal", "Bureau", "of", "Investigation"],
-    "category": "Government"
-  },
-  {
-    "id": "2026-04-21",
-    "date": "2026-04-21",
-    "acronym": "INTERPOL",
-    "phrase": ["International", "Criminal", "Police", "Organization"],
-    "category": "Law Enforcement"
-  },
-  {
-    "id": "2026-04-22",
-    "date": "2026-04-22",
+    "id": "2026-04-08",
+    "date": "2026-04-08",
     "acronym": "NATO",
     "phrase": ["North", "Atlantic", "Treaty", "Organization"],
     "category": "International"
   },
   {
+    "id": "2026-04-09",
+    "date": "2026-04-09",
+    "acronym": "HUD",
+    "phrase": ["Heads", "Up", "Display"],
+    "category": "Gaming"
+  },
+  {
+    "id": "2026-04-10",
+    "date": "2026-04-10",
+    "acronym": "BBC",
+    "phrase": ["British", "Broadcasting", "Corporation"],
+    "category": "Media"
+  },
+  {
+    "id": "2026-04-11",
+    "date": "2026-04-11",
+    "acronym": "ASAP",
+    "phrase": ["As", "Soon", "As", "Possible"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-04-12",
+    "date": "2026-04-12",
+    "acronym": "GIF",
+    "phrase": ["Graphics", "Interchange", "Format"],
+    "category": "Technology"
+  },
+  {
+    "id": "2026-04-13",
+    "date": "2026-04-13",
+    "acronym": "RAM",
+    "phrase": ["Random", "Access", "Memory"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-04-14",
+    "date": "2026-04-14",
+    "acronym": "USB",
+    "phrase": ["Universal", "Serial", "Bus"],
+    "category": "Technology"
+  },
+  {
+    "id": "2026-04-15",
+    "date": "2026-04-15",
+    "acronym": "PDF",
+    "phrase": ["Portable", "Document", "Format"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-04-16",
+    "date": "2026-04-16",
+    "acronym": "URL",
+    "phrase": ["Uniform", "Resource", "Locator"],
+    "category": "Internet"
+  },
+  {
+    "id": "2026-04-17",
+    "date": "2026-04-17",
+    "acronym": "CSS",
+    "phrase": ["Cascading", "Style", "Sheets"],
+    "category": "Web Design"
+  },
+  {
+    "id": "2026-04-18",
+    "date": "2026-04-18",
+    "acronym": "API",
+    "phrase": ["Application", "Programming", "Interface"],
+    "category": "Software"
+  },
+  {
+    "id": "2026-04-19",
+    "date": "2026-04-19",
+    "acronym": "SWAT",
+    "phrase": ["Special", "Weapons", "And", "Tactics"],
+    "category": "Law Enforcement"
+  },
+  {
+    "id": "2026-04-20",
+    "date": "2026-04-20",
+    "acronym": "ISBN",
+    "phrase": ["International", "Standard", "Book", "Number"],
+    "category": "Literature"
+  },
+  {
+    "id": "2026-04-21",
+    "date": "2026-04-21",
+    "acronym": "STEM",
+    "phrase": ["Science", "Technology", "Engineering", "Mathematics"],
+    "category": "Education"
+  },
+  {
+    "id": "2026-04-22",
+    "date": "2026-04-22",
+    "acronym": "FYI",
+    "phrase": ["For", "Your", "Information"],
+    "category": "Common Phrase"
+  },
+  {
     "id": "2026-04-23",
     "date": "2026-04-23",
-    "acronym": "WHO",
-    "phrase": ["World", "Health", "Organization"],
-    "category": "International"
+    "acronym": "SONAR",
+    "phrase": ["Sound", "Navigation", "and", "Ranging"],
+    "category": "Science"
   },
   {
     "id": "2026-04-24",
     "date": "2026-04-24",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
-    "category": "Gaming"
+    "acronym": "SIM",
+    "phrase": ["Subscriber", "Identity", "Module"],
+    "category": "Technology"
   },
   {
     "id": "2026-04-25",
     "date": "2026-04-25",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
-    "category": "Gaming"
+    "acronym": "JPEG",
+    "phrase": ["Joint", "Photographic", "Experts", "Group"],
+    "category": "Technology"
   },
   {
     "id": "2026-04-26",
     "date": "2026-04-26",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
-    "category": "Gaming"
+    "acronym": "LTE",
+    "phrase": ["Long", "Term", "Evolution"],
+    "category": "Technology"
   },
   {
     "id": "2026-04-27",
     "date": "2026-04-27",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
-    "category": "Gaming"
+    "acronym": "POTUS",
+    "phrase": ["President", "of", "the", "United", "States"],
+    "category": "Government"
   },
   {
     "id": "2026-04-28",
     "date": "2026-04-28",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
-    "category": "Gaming"
+    "acronym": "AWOL",
+    "phrase": ["Absent", "Without", "Leave"],
+    "category": "Military"
   },
   {
     "id": "2026-04-29",
     "date": "2026-04-29",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
-    "category": "Gaming"
+    "acronym": "ZIP",
+    "phrase": ["Zone", "Improvement", "Plan"],
+    "category": "General"
   },
   {
     "id": "2026-04-30",
     "date": "2026-04-30",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
-    "category": "Gaming"
+    "acronym": "NAFTA",
+    "phrase": ["North", "American", "Free", "Trade", "Agreement"],
+    "category": "International"
   },
   {
     "id": "2026-05-01",
     "date": "2026-05-01",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
-    "category": "Gaming"
+    "acronym": "UNICEF",
+    "phrase": ["United", "Nations", "Children's", "Fund"],
+    "category": "International"
   },
   {
     "id": "2026-05-02",
     "date": "2026-05-02",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
-    "category": "Gaming"
+    "acronym": "ROM",
+    "phrase": ["Read", "Only", "Memory"],
+    "category": "Computing"
   },
   {
     "id": "2026-05-03",
     "date": "2026-05-03",
-    "acronym": "HUD",
-    "phrase": ["Heads", "Up", "Display"],
+    "acronym": "BIOS",
+    "phrase": ["Basic", "Input", "Output", "System"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-04",
+    "date": "2026-05-04",
+    "acronym": "NPC",
+    "phrase": ["Non", "Player", "Character"],
     "category": "Gaming"
+  },
+  {
+    "id": "2026-05-05",
+    "date": "2026-05-05",
+    "acronym": "LAN",
+    "phrase": ["Local", "Area", "Network"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-06",
+    "date": "2026-05-06",
+    "acronym": "WAN",
+    "phrase": ["Wide", "Area", "Network"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-07",
+    "date": "2026-05-07",
+    "acronym": "VPN",
+    "phrase": ["Virtual", "Private", "Network"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-08",
+    "date": "2026-05-08",
+    "acronym": "IP",
+    "phrase": ["Internet", "Protocol"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-09",
+    "date": "2026-05-09",
+    "acronym": "DNS",
+    "phrase": ["Domain", "Name", "System"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-10",
+    "date": "2026-05-10",
+    "acronym": "HTTPS",
+    "phrase": ["Hypertext", "Transfer", "Protocol", "Secure"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-11",
+    "date": "2026-05-11",
+    "acronym": "SSL",
+    "phrase": ["Secure", "Sockets", "Layer"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-12",
+    "date": "2026-05-12",
+    "acronym": "TLS",
+    "phrase": ["Transport", "Layer", "Security"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-13",
+    "date": "2026-05-13",
+    "acronym": "FTP",
+    "phrase": ["File", "Transfer", "Protocol"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-14",
+    "date": "2026-05-14",
+    "acronym": "SQL",
+    "phrase": ["Structured", "Query", "Language"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-15",
+    "date": "2026-05-15",
+    "acronym": "SVG",
+    "phrase": ["Scalable", "Vector", "Graphics"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-16",
+    "date": "2026-05-16",
+    "acronym": "MP3",
+    "phrase": ["MPEG", "Layer", "3"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-17",
+    "date": "2026-05-17",
+    "acronym": "GUI",
+    "phrase": ["Graphical", "User", "Interface"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-18",
+    "date": "2026-05-18",
+    "acronym": "WYSIWYG",
+    "phrase": ["What", "You", "See", "Is", "What", "You", "Get"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-19",
+    "date": "2026-05-19",
+    "acronym": "AI",
+    "phrase": ["Artificial", "Intelligence"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-20",
+    "date": "2026-05-20",
+    "acronym": "ML",
+    "phrase": ["Machine", "Learning"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-21",
+    "date": "2026-05-21",
+    "acronym": "IoT",
+    "phrase": ["Internet", "of", "Things"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-22",
+    "date": "2026-05-22",
+    "acronym": "IaaS",
+    "phrase": ["Infrastructure", "as", "a", "Service"],
+    "category": "Computing"
+  },
+  {
+    "id": "2026-05-23",
+    "date": "2026-05-23",
+    "acronym": "SEO",
+    "phrase": ["Search", "Engine", "Optimization"],
+    "category": "Marketing"
+  },
+  {
+    "id": "2026-05-24",
+    "date": "2026-05-24",
+    "acronym": "SEM",
+    "phrase": ["Search", "Engine", "Marketing"],
+    "category": "Marketing"
+  },
+  {
+    "id": "2026-05-25",
+    "date": "2026-05-25",
+    "acronym": "KPI",
+    "phrase": ["Key", "Performance", "Indicator"],
+    "category": "Business"
+  },
+  {
+    "id": "2026-05-26",
+    "date": "2026-05-26",
+    "acronym": "CFO",
+    "phrase": ["Chief", "Financial", "Officer"],
+    "category": "Business"
+  },
+  {
+    "id": "2026-05-27",
+    "date": "2026-05-27",
+    "acronym": "COO",
+    "phrase": ["Chief", "Operating", "Officer"],
+    "category": "Business"
+  },
+  {
+    "id": "2026-05-28",
+    "date": "2026-05-28",
+    "acronym": "HR",
+    "phrase": ["Human", "Resources"],
+    "category": "Business"
+  },
+  {
+    "id": "2026-05-29",
+    "date": "2026-05-29",
+    "acronym": "PR",
+    "phrase": ["Public", "Relations"],
+    "category": "Business"
+  },
+  {
+    "id": "2026-05-30",
+    "date": "2026-05-30",
+    "acronym": "R&D",
+    "phrase": ["Research", "and", "Development"],
+    "category": "Business"
+  },
+  {
+    "id": "2026-05-31",
+    "date": "2026-05-31",
+    "acronym": "MBA",
+    "phrase": ["Master", "of", "Business", "Administration"],
+    "category": "Education"
+  },
+  {
+    "id": "2026-06-01",
+    "date": "2026-06-01",
+    "acronym": "PhD",
+    "phrase": ["Doctor", "of", "Philosophy"],
+    "category": "Education"
+  },
+  {
+    "id": "2026-06-02",
+    "date": "2026-06-02",
+    "acronym": "GED",
+    "phrase": ["General", "Educational", "Development"],
+    "category": "Education"
+  },
+  {
+    "id": "2026-06-03",
+    "date": "2026-06-03",
+    "acronym": "EQ",
+    "phrase": ["Emotional", "Quotient"],
+    "category": "Science"
+  },
+  {
+    "id": "2026-06-04",
+    "date": "2026-06-04",
+    "acronym": "MRI",
+    "phrase": ["Magnetic", "Resonance", "Imaging"],
+    "category": "Medicine"
+  },
+  {
+    "id": "2026-06-05",
+    "date": "2026-06-05",
+    "acronym": "ICU",
+    "phrase": ["Intensive", "Care", "Unit"],
+    "category": "Medicine"
+  },
+  {
+    "id": "2026-06-06",
+    "date": "2026-06-06",
+    "acronym": "RNA",
+    "phrase": ["Ribonucleic", "Acid"],
+    "category": "Science"
+  },
+  {
+    "id": "2026-06-07",
+    "date": "2026-06-07",
+    "acronym": "HIV",
+    "phrase": ["Human", "Immunodeficiency", "Virus"],
+    "category": "Medicine"
+  },
+  {
+    "id": "2026-06-08",
+    "date": "2026-06-08",
+    "acronym": "CDC",
+    "phrase": ["Centers", "for", "Disease", "Control", "and", "Prevention"],
+    "category": "Government"
+  },
+  {
+    "id": "2026-06-09",
+    "date": "2026-06-09",
+    "acronym": "FDA",
+    "phrase": ["Food", "and", "Drug", "Administration"],
+    "category": "Government"
+  },
+  {
+    "id": "2026-06-10",
+    "date": "2026-06-10",
+    "acronym": "EPA",
+    "phrase": ["Environmental", "Protection", "Agency"],
+    "category": "Government"
+  },
+  {
+    "id": "2026-06-11",
+    "date": "2026-06-11",
+    "acronym": "IRS",
+    "phrase": ["Internal", "Revenue", "Service"],
+    "category": "Government"
+  },
+  {
+    "id": "2026-06-12",
+    "date": "2026-06-12",
+    "acronym": "DOJ",
+    "phrase": ["Department", "of", "Justice"],
+    "category": "Government"
+  },
+  {
+    "id": "2026-06-13",
+    "date": "2026-06-13",
+    "acronym": "EU",
+    "phrase": ["European", "Union"],
+    "category": "International"
+  },
+  {
+    "id": "2026-06-14",
+    "date": "2026-06-14",
+    "acronym": "UN",
+    "phrase": ["United", "Nations"],
+    "category": "International"
+  },
+  {
+    "id": "2026-06-15",
+    "date": "2026-06-15",
+    "acronym": "IMF",
+    "phrase": ["International", "Monetary", "Fund"],
+    "category": "International"
+  },
+  {
+    "id": "2026-06-16",
+    "date": "2026-06-16",
+    "acronym": "ASEAN",
+    "phrase": ["Association", "of", "Southeast", "Asian", "Nations"],
+    "category": "International"
+  },
+  {
+    "id": "2026-06-17",
+    "date": "2026-06-17",
+    "acronym": "NGO",
+    "phrase": ["Non", "Governmental", "Organization"],
+    "category": "International"
+  },
+  {
+    "id": "2026-06-18",
+    "date": "2026-06-18",
+    "acronym": "WWF",
+    "phrase": ["World", "Wide", "Fund", "for", "Nature"],
+    "category": "Humanitarian"
+  },
+  {
+    "id": "2026-06-19",
+    "date": "2026-06-19",
+    "acronym": "FUBAR",
+    "phrase": ["Fouled", "Up", "Beyond", "All", "Recognition"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-20",
+    "date": "2026-06-20",
+    "acronym": "TGIF",
+    "phrase": ["Thank", "God", "It's", "Friday"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-21",
+    "date": "2026-06-21",
+    "acronym": "YOLO",
+    "phrase": ["You", "Only", "Live", "Once"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-22",
+    "date": "2026-06-22",
+    "acronym": "FOMO",
+    "phrase": ["Fear", "of", "Missing", "Out"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-23",
+    "date": "2026-06-23",
+    "acronym": "BRB",
+    "phrase": ["Be", "Right", "Back"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-24",
+    "date": "2026-06-24",
+    "acronym": "ROFL",
+    "phrase": ["Rolling", "on", "the", "Floor", "Laughing"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-25",
+    "date": "2026-06-25",
+    "acronym": "TL;DR",
+    "phrase": ["Too", "Long", "Didn't", "Read"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-26",
+    "date": "2026-06-26",
+    "acronym": "IDK",
+    "phrase": ["I", "Don't", "Know"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-27",
+    "date": "2026-06-27",
+    "acronym": "LMK",
+    "phrase": ["Let", "Me", "Know"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-28",
+    "date": "2026-06-28",
+    "acronym": "TTYL",
+    "phrase": ["Talk", "to", "You", "Later"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-29",
+    "date": "2026-06-29",
+    "acronym": "OMG",
+    "phrase": ["Oh", "My", "God"],
+    "category": "Common Phrase"
+  },
+  {
+    "id": "2026-06-30",
+    "date": "2026-06-30",
+    "acronym": "WTF",
+    "phrase": ["What", "the", "Foul"],
+    "category": "Common Phrase"
   }
 ]
