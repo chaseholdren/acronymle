@@ -40,7 +40,7 @@ export function HelpModal({ isOpen, onClose }: HelpModalProps) {
               </div>
               <div className="flex gap-2 items-center">
                 <div className="px-2 py-1 bg-yellow-400 text-white rounded font-bold min-w-[80px] text-center">Bureu</div>
-                <span>Almost! Correct word, wrong spot.</span>
+                <span>Almost! Correct word, but mispelled or in the wrong spot.</span>
               </div>
               <div className="flex gap-2 items-center">
                 <div className="px-2 py-1 bg-gray-400 text-white rounded font-bold min-w-[80px] text-center">Island</div>
