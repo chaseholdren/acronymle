@@ -82,5 +82,12 @@
     "acronym": "MODEM",
     "phrase": ["Modulator", "Demodulator"],
     "category": "Computing"
+  },
+  {
+    "id": "INTERPOL",
+    "date": "2026-02-18",
+    "acronym": "INTERPOL",
+    "phrase": ["International", "Criminal", "Police", "Organization"],
+    "category": "Law Enforcement"
   }
 ]
