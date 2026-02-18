@@ -1,14 +1,17 @@
 import { NextResponse } from "next/server";
 import acronyms from "@/data/acronyms.json";
 
-export async function GET() {
-  // Use UTC date to determine the daily acronym
-  const today = new Date().toISOString().split("T")[0];
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const requestedDate = searchParams.get("date");
+  
+  // Use provided date or fallback to system local date (less likely to be tomorrow than UTC)
+  const today = requestedDate || new Date().toLocaleDateString('en-CA');
   const acronymData = acronyms.find((a) => a.date === today);
 
   if (!acronymData) {
     return NextResponse.json(
-      { error: "Acronym not found for today" },
+      { error: "Acronym not found for " + today },
       { status: 404 }
     );
   }

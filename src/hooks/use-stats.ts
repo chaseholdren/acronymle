@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 export interface UserStats {
   totalGames: number;
@@ -33,29 +33,31 @@ export function useStats() {
     }
   });
 
-  const saveStats = (newStats: UserStats) => {
-    setStats(newStats);
-    localStorage.setItem("acronymle-stats", JSON.stringify(newStats));
-  };
+  // Persist stats to localStorage whenever they change
+  useEffect(() => {
+    localStorage.setItem("acronymle-stats", JSON.stringify(stats));
+  }, [stats]);
 
-  const recordGame = (date: string, isWin: boolean, guessCount: number) => {
-    if (stats.lastCompletedDate === date) return;
+  const recordGame = useCallback((date: string, isWin: boolean, guessCount: number) => {
+    setStats((currentStats) => {
+      if (currentStats.lastCompletedDate === date) return currentStats;
 
-    const newStats = { ...stats };
-    newStats.totalGames += 1;
-    newStats.lastCompletedDate = date;
+      const newStats = { ...currentStats };
+      newStats.totalGames += 1;
+      newStats.lastCompletedDate = date;
 
-    if (isWin) {
-      newStats.wins += 1;
-      newStats.currentStreak += 1;
-      newStats.maxStreak = Math.max(newStats.maxStreak, newStats.currentStreak);
-      newStats.guessDistribution[guessCount] = (newStats.guessDistribution[guessCount] || 0) + 1;
-    } else {
-      newStats.currentStreak = 0;
-    }
+      if (isWin) {
+        newStats.wins += 1;
+        newStats.currentStreak += 1;
+        newStats.maxStreak = Math.max(newStats.maxStreak, newStats.currentStreak);
+        newStats.guessDistribution[guessCount] = (newStats.guessDistribution[guessCount] || 0) + 1;
+      } else {
+        newStats.currentStreak = 0;
+      }
 
-    saveStats(newStats);
-  };
+      return newStats;
+    });
+  }, []);
 
   return {
     stats,

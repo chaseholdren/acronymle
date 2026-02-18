@@ -39,7 +39,8 @@ export function useGame() {
   useEffect(() => {
     async function initGame() {
       try {
-        const res = await fetch("/api/daily-acronym");
+        const localDate = new Date().toLocaleDateString('en-CA'); // YYYY-MM-DD
+        const res = await fetch(`/api/daily-acronym?date=${localDate}`);
         if (!res.ok) throw new Error("Failed to fetch daily acronym");
         const data = await res.json();
 

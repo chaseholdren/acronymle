@@ -18,15 +18,17 @@ export default function Home() {
   const { stats, recordGame } = useStats();
   const [showResults, setShowResults] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
+  const [hasShownAutoResults, setHasShownAutoResults] = useState(false);
 
   // Record game stats when finished
   useEffect(() => {
-    if (game.isComplete && game.id) {
+    if (game.isComplete && game.id && !hasShownAutoResults) {
       recordGame(game.id, game.isCorrect, game.guesses.length);
       
       // Delay opening modal for dramatic effect
       const timer = setTimeout(() => {
         setShowResults(true);
+        setHasShownAutoResults(true);
       }, 1500);
 
       if (game.isCorrect) {
@@ -37,7 +39,7 @@ export default function Home() {
 
       return () => clearTimeout(timer);
     }
-  }, [game.isComplete, game.id, game.isCorrect, game.guesses.length, recordGame]);
+  }, [game.isComplete, game.id, game.isCorrect, game.guesses.length, recordGame, hasShownAutoResults]);
 
   if (game.isLoading) {
     return (
